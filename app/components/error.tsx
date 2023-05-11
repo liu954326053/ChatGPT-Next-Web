@@ -40,27 +40,24 @@ export class ErrorBoundary extends React.Component<any, IErrorBoundaryState> {
       // Render error message
       return (
         <div className="error">
-          <h2>Oops, something went wrong!</h2>
-          <pre>
+          <h2>what?, 页面加载异常!</h2>
+          {/*<pre>
             <code>{this.state.error?.toString()}</code>
             <code>{this.state.info?.componentStack}</code>
-          </pre>
+          </pre>*/}
 
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <a href={ISSUE_URL} className="report">
+            {/*<a href={ISSUE_URL} className="report">
               <IconButton
                 text="Report This Error"
                 icon={<GithubIcon />}
                 bordered
               />
-            </a>
+            </a>*/}
             <IconButton
               icon={<ResetIcon />}
-              text="Clear All Data"
-              onClick={() =>
-                confirm(Locale.Settings.Actions.ConfirmClearAll) &&
-                this.clearAndSaveData()
-              }
+              text="重新加载"
+              onClick={() => window.location.reload()}
               bordered
             />
           </div>
