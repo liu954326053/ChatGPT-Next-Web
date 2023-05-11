@@ -40,7 +40,7 @@ export class ErrorBoundary extends React.Component<any, IErrorBoundaryState> {
       // Render error message
       return (
         <div className="error">
-          <h2>what?, 页面加载异常!</h2>
+          <h2>what？页面加载异常!</h2>
           {/*<pre>
             <code>{this.state.error?.toString()}</code>
             <code>{this.state.info?.componentStack}</code>
