@@ -10,7 +10,7 @@ const cn = {
     ChatItemCount: (count: number) => `${count} 条对话`,
   },
   Chat: {
-    SubTitle: (count: number) => `与 ChatGPT 的 ${count} 条对话`,
+    SubTitle: (count: number) => `与 云智AI 的 ${count} 条对话`,
     Actions: {
       ChatList: "查看消息列表",
       CompressedHistory: "查看压缩后的历史 Prompt",
@@ -40,7 +40,7 @@ const cn = {
     Copy: "全部复制",
     Download: "下载文件",
     MessageFromYou: "来自你的消息",
-    MessageFromChatGPT: "来自 ChatGPT 的消息",
+    MessageFromChatGPT: "来自 云智AI 的消息",
   },
   Memory: {
     Title: "历史摘要",
@@ -71,7 +71,7 @@ const cn = {
       All: "所有语言",
       Options: {
         cn: "简体中文",
-        en: "English",
+        /*en: "English",
         tw: "繁體中文",
         es: "Español",
         it: "Italiano",
@@ -79,8 +79,9 @@ const cn = {
         jp: "日本語",
         de: "Deutsch",
         vi: "Vietnamese",
-        ru: "Русский",
+        ru: "Русский",*/
       },
+      show: false,
     },
     Avatar: "头像",
     FontSize: {
