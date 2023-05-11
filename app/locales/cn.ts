@@ -71,7 +71,7 @@ const cn = {
       All: "所有语言",
       Options: {
         cn: "简体中文",
-        /*en: "English",
+        en: "English",
         tw: "繁體中文",
         es: "Español",
         it: "Italiano",
@@ -79,9 +79,8 @@ const cn = {
         jp: "日本語",
         de: "Deutsch",
         vi: "Vietnamese",
-        ru: "Русский",*/
+        ru: "Русский",
       },
-      show: false,
     },
     Avatar: "头像",
     FontSize: {
