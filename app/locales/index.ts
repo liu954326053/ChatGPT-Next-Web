@@ -87,4 +87,5 @@ export default {
   de: DE,
   vi: VI,
   ru: RU,
+  cs: CS,
 }[getLang()] as typeof CN;
