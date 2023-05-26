@@ -276,20 +276,6 @@ export function MaskPage() {
           <div className="window-actions">
             <div className="window-action-button">
               <IconButton
-                icon={<DownloadIcon />}
-                bordered
-                onClick={downloadAll}
-              />
-            </div>
-            <div className="window-action-button">
-              <IconButton
-                icon={<UploadIcon />}
-                bordered
-                onClick={() => importFromFile()}
-              />
-            </div>
-            <div className="window-action-button">
-              <IconButton
                 icon={<CloseIcon />}
                 bordered
                 onClick={() => navigate(-1)}
