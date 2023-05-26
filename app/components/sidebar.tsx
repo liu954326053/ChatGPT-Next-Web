@@ -6,7 +6,9 @@ import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
+import ChatLogoIcon from "../icons/chat-logo.svg";
 import AddIcon from "../icons/add.svg";
+import LogOutIcon from "../icons/logout.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
@@ -120,28 +122,26 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]}>
         <div className={styles["sidebar-title"]}>云智AI</div>
-        <div className={styles["sidebar-sub-title"]}>
-        </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <ChatLogoIcon />
         </div>
       </div>
 
       <div className={styles["sidebar-header-bar"]}>
         <IconButton
-          icon={<MaskIcon />}
-          text={shouldNarrow ? undefined : Locale.Mask.Name}
-          className={styles["sidebar-bar-button"]}
-          onClick={() => navigate(Path.NewChat, { state: { fromHome: true } })}
-          shadow
+            icon={<AddIcon />}
+            text={shouldNarrow ? undefined : Locale.Home.NewChat}
+            className={styles["sidebar-bar-button"]}
+            onClick={() => {
+              if (config.dontShowMaskSplashScreen) {
+                chatStore.newSession();
+                navigate(Path.Chat);
+              } else {
+                navigate(Path.NewChat);
+              }
+            }}
+            shadow
         />
-        {/*<IconButton
-          icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
-          className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
-          shadow
-        />*/}
       </div>
 
       <div
@@ -172,25 +172,21 @@ export function SideBar(props: { className?: string }) {
               <IconButton icon={<SettingsIcon />} shadow />
             </Link>
           </div>
-          {/*<div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
-              <IconButton icon={<GithubIcon />} shadow />
-            </a>
-          </div>*/}
+
         </div>
         <div>
           <IconButton
-            icon={<AddIcon />}
-            text={shouldNarrow ? undefined : Locale.Home.NewChat}
-            onClick={() => {
-              if (config.dontShowMaskSplashScreen) {
-                chatStore.newSession();
-                navigate(Path.Chat);
-              } else {
-                navigate(Path.NewChat);
-              }
-            }}
-            shadow
+              icon={<LogOutIcon />}
+              text={shouldNarrow ? undefined : Locale.Home.LogOut}
+              onClick={() => {
+                if (config.dontShowMaskSplashScreen) {
+                  chatStore.newSession();
+                  navigate(Path.Chat);
+                } else {
+                  navigate(Path.NewChat);
+                }
+              }}
+              shadow
           />
         </div>
       </div>

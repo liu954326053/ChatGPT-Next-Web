@@ -1,10 +1,9 @@
 @mixin container {
-  background-color: var(--white);
   border: var(--border-in-light);
   border-radius: 20px;
   box-shadow: var(--shadow);
   color: var(--black);
-  background-color: var(--white);
+  background: linear-gradient(307deg, #b3f1ff, #b3d5ff, #e6bafb);
   min-width: 600px;
   min-height: 480px;
   max-width: 1200px;
@@ -37,15 +36,19 @@
   }
 }
 
+//linear-gradient(307deg, #b3f1ff, #b3d5ff, #e6bafb)
+
 .sidebar {
   top: 0;
   width: var(--sidebar-width);
   box-sizing: border-box;
   padding: 20px;
-  background-color: var(--second);
+  padding-top: 0 !important;
+  //background: linear-gradient(307deg, #b3f1ff, #b3d5ff, #e6bafb);
   display: flex;
   flex-direction: column;
-  box-shadow: inset -2px 0px 2px 0px rgb(0, 0, 0, 0.05);
+  //box-shadow: inset -2px 0px 2px 0px rgb(0, 0, 0, 0.05);
+  //border-right: 1px dashed #ffffffe6;
   position: relative;
   transition: width ease 0.05s;
 
@@ -87,6 +90,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: rgb(255 255 255 / 17%);
 }
 
 .mobile {
@@ -110,6 +114,7 @@
     height: var(--full-height);
     transition: all ease 0.3s;
     box-shadow: none;
+    background: linear-gradient(307deg, #b3f1ff, #b3d5ff, #e6bafb);
   }
 
   .sidebar-show {
@@ -125,12 +130,12 @@
   position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sidebar-logo {
-  position: absolute;
-  right: 0;
-  bottom: 18px;
 }
 
 .sidebar-title {
@@ -153,11 +158,11 @@
 
 .chat-item {
   padding: 10px 14px;
-  background-color: var(--white);
+  background-color: #ffffff7a;
   border-radius: 10px;
   margin-bottom: 10px;
   box-shadow: var(--card-shadow);
-  transition: background-color 0.3s ease;
+  transition: background 0.5s;
   cursor: pointer;
   user-select: none;
   border: 2px solid transparent;
@@ -165,11 +170,12 @@
 }
 
 .chat-item:hover {
-  background-color: var(--hover-color);
+  background-color: rgba(255, 255, 255, 0.87);
 }
 
 .chat-item-selected {
-  border-color: var(--primary);
+  background: linear-gradient(36deg, #ffffff, #b3d5ff, #f3daff);
+  border: 1px dashed #ffffff;
 }
 
 .chat-item-title {
@@ -395,7 +401,7 @@
   max-width: 100%;
   margin-top: 10px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.87);
   padding: 10px;
   font-size: 14px;
   user-select: text;
@@ -447,7 +453,7 @@
 }
 
 .chat-message-action-date {
-  color: #aaa;
+  color: #ffffffad;
 }
 
 .chat-input-panel {
@@ -459,7 +465,7 @@
   flex-direction: column;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-top: var(--border-in-light);
+  border-top: 1px dashed #fff;
   box-shadow: var(--card-shadow);
 }
 
@@ -527,7 +533,7 @@
   border-radius: 10px;
   border: var(--border-in-light);
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.03);
-  background-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.87);
   color: var(--black);
   font-family: inherit;
   padding: 10px 90px 10px 14px;
@@ -536,11 +542,11 @@
 }
 
 .chat-input:focus {
-  border: 1px solid var(--primary);
+  border: 1px solid rgb(152 196 247);
 }
 
 .chat-input-send {
-  background-color: var(--primary);
+  background-color: rgb(152 196 247);
   color: white;
 
   position: absolute;

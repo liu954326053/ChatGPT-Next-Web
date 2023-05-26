@@ -32,7 +32,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 40px;
-  border-bottom: var(--border-in-light);
+  border-bottom: 1px dashed #fff;
   padding: 10px 20px;
   animation: slide-in ease 0.6s;
 
@@ -57,7 +57,7 @@
 }
 
 .list {
-  border: var(--border-in-light);
+  border: 1px dashed #fff;
   border-radius: 10px;
   box-shadow: var(--card-shadow);
   margin-bottom: 20px;

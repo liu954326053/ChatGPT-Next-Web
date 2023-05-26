@@ -350,31 +350,6 @@ export function Settings() {
             </Popover>
           </ListItem>
 
-          {/*<ListItem
-            title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
-            subTitle={
-              checkingUpdate
-                ? Locale.Settings.Update.IsChecking
-                : hasNewVersion
-                ? Locale.Settings.Update.FoundUpdate(remoteId ?? "ERROR")
-                : Locale.Settings.Update.IsLatest
-            }
-          >
-            {checkingUpdate ? (
-              <LoadingIcon />
-            ) : hasNewVersion ? (
-              <Link href={UPDATE_URL} target="_blank" className="link">
-                {Locale.Settings.Update.GoToUpdate}
-              </Link>
-            ) : (
-              <IconButton
-                icon={<ResetIcon></ResetIcon>}
-                text={Locale.Settings.Update.CheckUpdate}
-                onClick={() => checkUpdate(true)}
-              />
-            )}
-          </ListItem>*/}
-
           <ListItem title={Locale.Settings.SendKey}>
             <Select
               value={config.submitKey}
@@ -386,23 +361,6 @@ export function Settings() {
               }}
             >
               {Object.values(SubmitKey).map((v) => (
-                <option value={v} key={v}>
-                  {v}
-                </option>
-              ))}
-            </Select>
-          </ListItem>
-
-          <ListItem title={Locale.Settings.Theme}>
-            <Select
-              value={config.theme}
-              onChange={(e) => {
-                updateConfig(
-                  (config) => (config.theme = e.target.value as any as Theme),
-                );
-              }}
-            >
-              {Object.values(Theme).map((v) => (
                 <option value={v} key={v}>
                   {v}
                 </option>
@@ -444,38 +402,6 @@ export function Settings() {
             ></InputRange>
           </ListItem>
 
-          <ListItem
-            title={Locale.Settings.SendPreviewBubble.Title}
-            subTitle={Locale.Settings.SendPreviewBubble.SubTitle}
-          >
-            <input
-              type="checkbox"
-              checked={config.sendPreviewBubble}
-              onChange={(e) =>
-                updateConfig(
-                  (config) =>
-                    (config.sendPreviewBubble = e.currentTarget.checked),
-                )
-              }
-            ></input>
-          </ListItem>
-
-          <ListItem
-            title={Locale.Settings.Mask.Title}
-            subTitle={Locale.Settings.Mask.SubTitle}
-          >
-            <input
-              type="checkbox"
-              checked={!config.dontShowMaskSplashScreen}
-              onChange={(e) =>
-                updateConfig(
-                  (config) =>
-                    (config.dontShowMaskSplashScreen =
-                      !e.currentTarget.checked),
-                )
-              }
-            ></input>
-          </ListItem>
         </List>
 
         <List>
@@ -513,7 +439,7 @@ export function Settings() {
             </ListItem>
           ) : null}
 
-          {/*<ListItem
+          <ListItem
             title={Locale.Settings.Usage.Title}
             subTitle={
               showUsage
@@ -535,7 +461,7 @@ export function Settings() {
                 onClick={() => checkUsage(true)}
               />
             )}
-          </ListItem>*/}
+          </ListItem>
         </List>
 
         <List>

@@ -360,20 +360,6 @@ export function ChatActions(props: {
           <BrainIcon />
         </div>
       )}
-
-      <div
-        className={`${chatStyle["chat-input-action"]} clickable`}
-        onClick={nextTheme}
-      >
-        {theme === Theme.Auto ? (
-          <AutoIcon />
-        ) : theme === Theme.Light ? (
-          <LightIcon />
-        ) : theme === Theme.Dark ? (
-          <DarkIcon />
-        ) : null}
-      </div>
-
       <div
         className={`${chatStyle["chat-input-action"]} clickable`}
         onClick={props.showPromptHints}
@@ -618,7 +604,7 @@ export function Chat() {
       doSubmit(text);
     },
   });
-
+  console.log(config)
   return (
     <div className={styles.chat} key={session.id}>
       <div className="window-header">
@@ -823,7 +809,7 @@ export function Chat() {
             icon={<SendWhiteIcon />}
             text={Locale.Chat.Send}
             className={styles["chat-input-send"]}
-            type="primary"
+            // type="primary"
             onClick={() => doSubmit(userInput)}
           />
         </div>
