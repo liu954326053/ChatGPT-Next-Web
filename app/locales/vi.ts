@@ -54,6 +54,7 @@ const vi: LocaleType = {
   },
   Home: {
     NewChat: "Cuộc trò chuyện mới",
+    LogOut: "退出",
     DeleteChat: "Xác nhận xóa các cuộc trò chuyện đã chọn?",
     DeleteToast: "Đã xóa cuộc trò chuyện",
     Revert: "Khôi phục",

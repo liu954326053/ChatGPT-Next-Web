@@ -54,6 +54,7 @@ const jp: LocaleType = {
   },
   Home: {
     NewChat: "新しいチャット",
+    LogOut: "退出",
     DeleteChat: "選択したチャットを削除してもよろしいですか？",
     DeleteToast: "チャットが削除されました",
     Revert: "元に戻す",
